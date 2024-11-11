@@ -1,19 +1,39 @@
-class Main {
-    public static void main(String[] args) {
-  
-      String str = "Radar", reverseStr = "";
-      
-      int strLength = str.length();
-  
-      for (int i = (strLength - 1); i >=0; --i) {
-        reverseStr = reverseStr + str.charAt(i);
-      }
-  
-      if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
-        System.out.println(str + " is a Palindrome String.");
-      }
-      else {
-        System.out.println(str + " is not a Palindrome String.");
-      }
+// Java Program to implement
+// Basic Approach to check if
+// string is a Palindrome
+import java.io.*;
+
+// Driver Class
+class GFG {
+    // main function
+    public static boolean isPalindrome(String str)
+    {
+        // Initializing an empty string to store the reverse
+        // of the original str
+        String rev = "";
+
+        // Initializing a new boolean variable for the
+        // answer
+        boolean ans = false;
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+
+        // Checking if both the strings are equal
+        if (str.equals(rev)) {
+            ans = true;
+        }
+        return ans;
     }
-  }
+    public static void main(String[] args)
+    {
+        // Input string
+        String str = "geeks";
+
+        // Convert the string to lowercase
+        str = str.toLowerCase();
+        boolean A = isPalindrome(str);
+        System.out.println(A);
+    }
+}
