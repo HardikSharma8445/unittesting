@@ -29,7 +29,7 @@ class GFG {
     public static void main(String[] args)
     {
         // Input string
-        String str = "geeks";
+        String str = "madam";
 
         // Convert the string to lowercase
         str = str.toLowerCase();
